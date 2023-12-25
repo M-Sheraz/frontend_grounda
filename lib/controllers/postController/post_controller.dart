@@ -95,6 +95,8 @@ class PostController extends GetxController {
     );
     if (response.statusCode == 200 && response.body != 'null') {
       post.value = postModelFromJson(response.body);
+      debugPrint(
+          "Post Data :================================ > ${response.body}");
       isLoading.value = false;
     } else {
       Get.snackbar('Error', response.body,
@@ -224,7 +226,7 @@ class PostController extends GetxController {
       "showContactDetails": showContactDetails,
       "purpose": purpose
     };
-    print(bodyPrepare);
+    debugPrint('CREATE POST BODY : =================> $bodyPrepare');
 
     var response = await http.post(Uri.parse(baseUrl + createPost),
         body: jsonEncode(bodyPrepare),
@@ -232,7 +234,7 @@ class PostController extends GetxController {
           "Content-Type": "application/json",
           "Authorization": "Bearer $token"
         });
-    print(response.body);
+    debugPrint(response.body);
     if (response.statusCode == 200 && response.body != 'null') {
       // post.value = postModelFromJson(response.body);
       isLoading.value = false;

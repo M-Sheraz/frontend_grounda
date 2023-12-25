@@ -84,7 +84,7 @@ class LoginView extends GetView<ThemeChangeController> {
                         Flexible(
                           child: Container(
                             width: width / 3.5,
-                            height: height / 2,
+                            height: height / 1.6,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30.0),
                               border: Border.all(

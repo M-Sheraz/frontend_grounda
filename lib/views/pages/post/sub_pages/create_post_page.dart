@@ -238,17 +238,21 @@ class _CreatePostPageState extends State<CreatePostPage> {
                             .map<DropdownMenuItem<String>>((value) {
                           return DropdownMenuItem<String>(
                             value: value,
-                            child: Text(value),
+                            child: Text(
+                              value,
+                              style: const TextStyle(color: kWhiteColor),
+                            ),
                           );
                         }).toList(),
                         purposeValue: postController.purposeValue.value,
                         purposeOnChange: (value) {
                           postController.purposeValue.value = value.toString();
                         },
+
                         categoryDropDownList: categoryController.category
                             .map<DropdownMenuItem<String>>((value) {
                           return DropdownMenuItem<String>(
-                            value: value.name,
+                            value: value.name!,
                             child: Text(value.name!),
                           );
                         }).toList(),
