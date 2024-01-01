@@ -99,7 +99,7 @@ class _CreatePostPageState extends State<CreatePostPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: height * .8,
+                height: height * .9,
                 width: width * .8,
                 decoration: BoxDecoration(
                   color: themeChangeController.isDarkMode.value
